@@ -23,7 +23,7 @@ async function sendMessage() {
   document.getElementById('user-input').value = ''; // Clear the input field
 
   try {
-    const response = await fetch('https://rfp-einstein-advanced-rag-kkvkik.5sc6y6-4.usa-e2.cloudhub.io/promp', {
+    const response = await fetch('https://rfp-einstein-advanced-rag-kkvkik.5sc6y6-4.usa-e2.cloudhub.io/prompt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
