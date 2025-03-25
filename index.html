@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuleSoft AI Chain Einstein AI Agent for MuleSoft Documentation</title>
+    <!-- Material Icons -->
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container">
+      <div class="card">
+        <!-- Header Section -->
+        <div class="header">
+          <img
+            src="assets/logo.png"
+            alt="MuleChain AI Agent Logo"
+            class="logo"
+          />
+          <div class="header-text">
+            <h1>MuleSoft AI Chain Doc Agent</h1>
+            <h2>I know everything from <b>docs.mulesoft.com.</b></h2>
+          </div>
+        </div>
+        <!-- Chat Window -->
+        <div class="card-content">
+          <div id="chat-window" class="chat-window">
+            <div id="output" class="output"></div>
+          </div>
+        </div>
+        <!-- Indicator Section -->
+        <!--<div class="indicator-container">
+          <div class="indicator" id="identity-indicator">Identity</div>
+          <div class="indicator" id="profanity-indicator">Profanity</div>
+          <div class="indicator" id="hate-indicator">Hate</div>
+          <div class="indicator" id="violence-indicator">Violence</div>
+          <div class="indicator" id="sexual-indicator">Sexual</div>
+          <div class="indicator" id="physical-indicator">Physical</div>
+        </div>-->
+
+        <!-- Input Section -->
+        <div class="input-container">
+          <input
+            id="user-input"
+            type="text"
+            placeholder="Send a message to the Einstein"
+          />
+          <button
+            id="send-btn"
+            class="btn waves-effect waves-light"
+            label="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.59 5.58L20 12l-8-8z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Theme Toggle Switch -->
+    <div class="switch-container">
+      <div class="switch">
+        <label>
+          Light
+          <input type="checkbox" id="theme-toggle" />
+          <span class="lever"></span>
+          Dark
+        </label>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
