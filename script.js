@@ -22,8 +22,15 @@ async function sendMessage() {
   addMessage('user', userInput);
   document.getElementById('user-input').value = ''; // Clear the input field
 
+  // Determine the selected RAG type
+  const ragType = document.querySelector('input[name="ragType"]:checked').value;
+  const endpoint =
+    ragType === 'basic'
+      ? 'https://rfp-einstein-kkvkik.5sc6y6-1.usa-e2.cloudhub.io/prompt'
+      : 'https://rfp-einstein-advanced-rag-kkvkik.5sc6y6-4.usa-e2.cloudhub.io/prompt';
+
   try {
-    const response = await fetch('https://rfp-einstein-advanced-rag-kkvkik.5sc6y6-4.usa-e2.cloudhub.io/prompt', {
+    const response = await fetch(endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -55,12 +62,9 @@ async function sendMessage() {
       }
     }
 
-    const text = pElement.outerHTML.replace(/\n/g, '<br>')
+    const text = pElement.outerHTML.replace(/\n/g, '<br>');
 
-    //updateIndicators(data.generation.contentQuality.scanToxicity.categories);
     console.log(text);
-
-    //loadingMessageElement.remove();
 
     addMessage('bot', text);
   } catch (error) {
@@ -74,7 +78,6 @@ async function sendMessage() {
     currentMessageIndex = 0;
   }
 }
-
 
 function updateIndicators(categories) {
   //initializeIndicators();

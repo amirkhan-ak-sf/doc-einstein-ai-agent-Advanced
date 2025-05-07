@@ -171,6 +171,30 @@ body {
   transform: scale(0.95); /* Slightly reduce size on click for press effect */
 }
 
+/* RAG selection styling */
+.rag-selection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.rag-selection label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+.rag-selection input[type="radio"] {
+  margin-right: 5px;
+}
+
+.rag-selection span {
+  line-height: 1.5;
+}
+
 /* Chat message styling */
 .user {
   align-self: flex-end;
@@ -280,6 +304,10 @@ body {
   fill: #000; /* Icon color */
 }
 
+.dark-theme .rag-selection label {
+  color: #f5f5f5;
+}
+
 .indicator-container {
   display: flex;
   justify-content: space-between;
@@ -304,10 +332,21 @@ body {
   background-color: #ff9800; /* Orange */
 }
 
-
-
 /* Media queries for responsive font sizes */
 @media (max-width: 768px) {
   .header-text h1 {
-    font-size: 20px; /* Adjust font
-    
+    font-size: 20px; /* Adjust font size */
+  }
+
+  .header-text h2 {
+    font-size: 14px;
+  }
+
+  .rag-selection {
+    gap: 5px;
+  }
+
+  .rag-selection label {
+    font-size: 12px;
+  }
+}
